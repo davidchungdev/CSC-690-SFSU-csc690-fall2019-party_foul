@@ -66,7 +66,7 @@
                                 <rect key="frame" x="42" y="44" width="330" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-G4-WTf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-G4-WTf">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -83,6 +83,7 @@
                         <outlet property="cardButton" destination="bWQ-D9-bah" id="IKH-tW-Zjm"/>
                         <outlet property="cardImageView" destination="KKv-pX-cCs" id="Wcf-VU-5ay"/>
                         <outlet property="infoButton" destination="Tpu-5D-6WV" id="egY-wk-ggi"/>
+                        <outlet property="playerLabel" destination="NBD-G4-WTf" id="8hK-rN-KMV"/>
                         <outlet property="ruleButton" destination="dfH-9G-nrl" id="HIH-YT-1Zj"/>
                         <outlet property="ruleTextField" destination="QHQ-uH-52q" id="w3q-Z6-O1U"/>
                     </connections>
@@ -129,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZW-Aq-Ml3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="60"/>
+            <point key="canvasLocation" x="1606" y="76"/>
         </scene>
     </scenes>
     <resources>

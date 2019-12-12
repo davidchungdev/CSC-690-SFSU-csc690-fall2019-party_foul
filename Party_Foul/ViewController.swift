@@ -15,8 +15,29 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var ruleButton: UIButton!
     @IBOutlet weak var ruleTextField: UILabel!
+    @IBOutlet weak var playerLabel: UILabel!
     
     var rule : String!
+    var cardCounter: Int = 0
+    var playerCounter: Int = 9
+    var aceCounter: Int = 0
+    var twoCounter: Int = 0
+    var threeCounter: Int = 0
+    var fourCounter: Int = 0
+    var fiveCounter: Int = 0
+    var sixCounter: Int = 0
+    var sevenCounter: Int = 0
+    var eightCounter: Int = 0
+    var nineCounter: Int = 0
+    var tenCounter: Int = 0
+    var jackCounter: Int = 0
+    var queenCounter: Int = 0
+    var kingCounter: Int = 0
+    var querstionMaster: String = ""
+    var counter: Int = 0
+
+    
+    var cardDrawnArray:[Int] = []
     
     //Array that contains 52 cards
     var cardNameArray:[String] = ["aceClubs", "aceDiamonds", "aceHearts", "aceSpades", "twoClubs", "twoDiamonds", "twoHearts", "twoSpades", "threeClubs", "threeDiamonds", "threeHearts", "threeSpades", "fourClubs", "fourDiamonds", "fourHearts", "fourSpades", "fiveClubs", "fiveDiamonds", "fiveHearts", "fiveSpades", "sixClubs", "sixDiamonds", "sixHearts", "sixSpades", "sevenClubs", "sevenDiamonds", "sevenHearts", "sevenSpades", "eightClubs", "eightDiamonds", "eightHearts", "eightSpades", "nineClubs", "nineDiamonds", "nineHearts", "nineSpades", "tenClubs", "tenDiamonds", "tenHearts", "tenSpades", "jackClubs", "jackDiamonds", "jackHearts", "jackSpades", "queenClubs", "queenDiamonds", "queenHearts", "queenSpades", "kingClubs", "kingDiamonds", "kingHearts", "kingSpades"]
@@ -26,50 +47,22 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
         // Do any additional setup after loading the view.
     }
     
-    //PopUpStuff
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
-        if segue.identifier == "rulesPopUp" {
-            let pvc: Rules = segue.destination as! Rules
-            pvc.popoverPresentationController?.backgroundColor = UIColor.darkGray
-            pvc.popoverPresentationController!.delegate = self
-            
-            let presentationViewController = pvc.popoverPresentationController
-            presentationViewController?.permittedArrowDirections = .any
-            presentationViewController?.delegate = self
-            presentationViewController?.sourceView = ruleButton
-            presentationViewController?.sourceRect = ruleButton.bounds
-        }
-    }
-    
-    func adaptivePresentationStyle(for controller:
-        UIPresentationController) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.none
-    }
-    
-    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
-        return UINavigationController(rootViewController: controller.presentedViewController)
-    }
-    
-    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
-        
-        print("Controller did dismiss popover.")
-    }
-    
-    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
-        
-        print("Controller should dismiss popover.")
-        
-        return true
-    }
     
     
     //Method for tapCardButton
     @IBAction func cardTapped(_ sender: UIButton) {
         
+        
         //Randomly generates number
         var randomNumber = Int(arc4random_uniform(52))
+        
+        //Checks if card already have been drawn
+        while cardDrawnArray.contains(randomNumber){
+            
+            randomNumber = Int(arc4random_uniform(52))
+        
+        }
+        
         
         //Construct a string with a random number
         var cardString: String = self.cardNameArray[randomNumber]
@@ -77,38 +70,73 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
         //Set cardView to the asset corresponding to the randomized number
         self.cardImageView.image = UIImage(named: cardString)
         
+        
+        
         //Set of rules that corresponds with each card
         switch randomNumber {
         case 0,1,2,3:
             self.ruleTextField.text = "Everyone Drinks!"
+            aceCounter += 1
         case 4,5,6,7:
             self.ruleTextField.text = "You Drink!"
+            twoCounter += 1
         case 8,9,10,11:
             self.ruleTextField.text = "Me Drinks"
+            threeCounter += 1
         case 12,13,14,15:
             self.ruleTextField.text = "Women Drinks"
+            fourCounter += 1
         case 16,17,18,19:
             self.ruleTextField.text = "Drive"
+            fiveCounter += 1
         case 20,21,22,23:
             self.ruleTextField.text = "Men Drinks"
+            sixCounter += 1
         case 24,25,26,27:
             self.ruleTextField.text = "Heaven"
+            sevenCounter += 1
         case 28,29,30,31:
             self.ruleTextField.text = "Pick a Mate"
+            eightCounter += 1
         case 32,33,34,35:
             self.ruleTextField.text = "Bust a Rhyme"
+            nineCounter += 1
         case 36,37,38,39:
             self.ruleTextField.text = "Make a Rule"
+            tenCounter += 1
         case 40,41,42,43:
             self.ruleTextField.text = "Waterfall"
+            jackCounter += 1
         case 44,45,46,47:
-            self.ruleTextField.text = "Categories"
+            self.ruleTextField.text = "Question Master"
+            queenCounter += 1
         case 48,49,50,51:
             self.ruleTextField.text = "Pour into the King's Cup"
+            kingCounter += 1
 
         default:
             self.ruleTextField.text = "Pick a Card"
         }
+        
+        //Counts number of cards drawn
+        self.cardCounter += 1
+        
+        //Updates player number
+        if cardCounter % playerCounter == 0 {
+            self.playerLabel.text = "Player " + String(playerCounter)
+        } else {
+            self.playerLabel.text = "Player " + String(cardCounter % playerCounter)
+        }
+        
+    
+            //Addes to currently drawn cards to array of cards that have been drawn
+           cardDrawnArray.append(randomNumber)
+       counter += 1
+       for element in cardDrawnArray{
+              print(element)
+          }
+       print("count: ", String(counter))
+    
         
     }
     
