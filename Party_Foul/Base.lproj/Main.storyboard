@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mGX-oF-jPz">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -7,72 +7,203 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Start Screen View Controller-->
+        <scene sceneID="Myh-ai-hIO">
+            <objects>
+                <viewController id="mGX-oF-jPz" customClass="StartScreenViewController" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ww-QG-7Bd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kK-9h-mzM">
+                                <rect key="frame" x="20" y="638" width="374" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="RULES">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-gG-ZZD">
+                                <rect key="frame" x="20" y="746" width="374" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="EXIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitTapped:" destination="mGX-oF-jPz" eventType="touchUpInside" id="yTl-Lh-aEt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hy-Qs-aY9">
+                                <rect key="frame" x="20" y="530" width="374" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.1459058821" green="0.57784944770000002" blue="0.99220126870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="UpU-nD-evY"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beersignII" translatesAutoresizingMaskIntoConstraints="NO" id="5ma-hb-sqx">
+                                <rect key="frame" x="0.0" y="33" width="414" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Party Foul" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ie-yT-mSW">
+                                <rect key="frame" x="0.0" y="410" width="414" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="61"/>
+                                <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LZM-FU-JcX"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="QZ8-gG-ZZD" id="nLf-Ku-apN"/>
+                        <outlet property="rulesButton" destination="3kK-9h-mzM" id="beq-h8-ogP"/>
+                        <outlet property="startButton" destination="9hy-Qs-aY9" id="tCk-uM-jID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEz-wr-NE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3191.304347826087" y="-32.142857142857139"/>
+        </scene>
+        <!--Player Screen View Controller-->
+        <scene sceneID="8gH-ir-9K6">
+            <objects>
+                <viewController id="qMm-v8-YOK" customClass="PlayerScreenViewController" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSL-V4-yF3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Number of Players" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4n-kq-sbs">
+                                <rect key="frame" x="32" y="165" width="362" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuQ-Zr-dbe">
+                                <rect key="frame" x="32" y="306" width="362" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="enter:" destination="qMm-v8-YOK" eventType="touchUpInside" id="kHE-nP-7sn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5cJ-H8-l1k"/>
+                    </view>
+                    <connections>
+                        <outlet property="enterButton" destination="fuQ-Zr-dbe" id="UhA-Od-eFP"/>
+                        <outlet property="textField" destination="H4n-kq-sbs" id="TR3-i5-klp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vds-co-q7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4629" y="-212"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="KKv-pX-cCs">
-                                <rect key="frame" x="20" y="161" width="374" height="524"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwA-N5-CpZ">
+                                <rect key="frame" x="-1" y="50" width="416" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWQ-D9-bah">
-                                <rect key="frame" x="20" y="161" width="374" height="524"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
-                                <connections>
-                                    <action selector="cardTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JuH-Vk-cRP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfH-9G-nrl">
-                                <rect key="frame" x="20" y="797" width="76" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Rule Info"/>
-                                <connections>
-                                    <segue destination="sB1-D9-8VR" kind="popoverPresentation" identifier="rulesPopUp" popoverAnchorView="dfH-9G-nrl" id="2ce-WQ-y2v">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpu-5D-6WV">
-                                <rect key="frame" x="304" y="797" width="90" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="infoButton">
-                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="infoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vdb-yo-N1t"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-8f-CYo" userLabel="playerView">
+                                        <rect key="frame" x="70" y="0.0" width="256" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-G4-WTf">
+                                                <rect key="frame" x="4" y="15" width="248" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="38"/>
+                                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHg-wa-tH7" userLabel="kingView">
+                                        <rect key="frame" x="328" y="9" width="54" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyBeer" translatesAutoresizingMaskIntoConstraints="NO" id="Qif-EH-x6b">
+                                                <rect key="frame" x="-3" y="0.0" width="60" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.29973779965753422" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZn-fZ-Fib" userLabel="ruleView">
-                                <rect key="frame" x="42" y="693" width="330" height="101"/>
+                                <rect key="frame" x="0.0" y="712" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHQ-uH-52q">
-                                        <rect key="frame" x="4" y="10" width="322" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-8f-CYo">
-                                <rect key="frame" x="42" y="44" width="330" height="109"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1f-HK-bX2" userLabel="cardView">
+                                <rect key="frame" x="0.0" y="137" width="414" height="567"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-G4-WTf">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="109"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWQ-D9-bah">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="567"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                        <connections>
+                                            <action selector="cardTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JuH-Vk-cRP"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="KKv-pX-cCs">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="567"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-Ge-pmJ">
+                                <rect key="frame" x="157" y="776" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfH-9G-nrl">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <connections>
+                                            <segue destination="sB1-D9-8VR" kind="popoverPresentation" identifier="rulesPopUp" popoverAnchorView="dfH-9G-nrl" id="2ce-WQ-y2v">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="infoIconWhitenBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-zM-GcJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
                                 </subviews>
                             </view>
                         </subviews>
@@ -80,9 +211,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="beerImageView" destination="Qif-EH-x6b" id="XLQ-x2-IOE"/>
                         <outlet property="cardButton" destination="bWQ-D9-bah" id="IKH-tW-Zjm"/>
                         <outlet property="cardImageView" destination="KKv-pX-cCs" id="Wcf-VU-5ay"/>
-                        <outlet property="infoButton" destination="Tpu-5D-6WV" id="egY-wk-ggi"/>
+                        <outlet property="cardView" destination="e1f-HK-bX2" id="1NW-bt-c3z"/>
+                        <outlet property="hudDisplay" destination="jwA-N5-CpZ" id="rlm-nd-C8A"/>
+                        <outlet property="infoIconImage" destination="Z6v-zM-GcJ" id="UqD-nd-XaN"/>
+                        <outlet property="infoView" destination="gFd-Ge-pmJ" id="Uvg-qg-qYT"/>
+                        <outlet property="kingCountView" destination="kHg-wa-tH7" id="ZcD-r9-VOC"/>
                         <outlet property="playerLabel" destination="NBD-G4-WTf" id="8hK-rN-KMV"/>
                         <outlet property="ruleButton" destination="dfH-9G-nrl" id="HIH-YT-1Zj"/>
                         <outlet property="ruleTextField" destination="QHQ-uH-52q" id="w3q-Z6-O1U"/>
@@ -90,51 +226,744 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281.15942028985512" y="128.57142857142856"/>
+            <point key="canvasLocation" x="-2119" y="-32"/>
         </scene>
         <!--Rules-->
         <scene sceneID="Urm-9q-Zac">
             <objects>
-                <viewController id="sB1-D9-8VR" customClass="Rules" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ESy-Z6-WY9" userLabel="backgroundView">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="sB1-D9-8VR" customClass="Rules" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I1C-Dw-JT1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fv4-HU-L2O" userLabel="topView">
-                                <rect key="frame" x="2" y="2" width="398" height="393"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-0o-RRO">
+                                <rect key="frame" x="20" y="-8" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Everyone Drinks! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f3-h8-haY">
-                                        <rect key="frame" x="0.0" y="2" width="387" height="199"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="9Yi-Rv-Fpz"/>
-                                            <constraint firstAttribute="height" constant="200" id="j2d-LA-42n"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="ACE">
+                                    <color key="titleColor" red="0.14871865510000001" green="0.57390666010000002" blue="0.98827964069999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JcX-Ve-emy" kind="popoverPresentation" identifier="acePopUp" popoverAnchorView="BVE-0o-RRO" id="eqj-ou-WSJ">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmS-bZ-e2N">
+                                <rect key="frame" x="20" y="100" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="TWO">
+                                    <color key="titleColor" red="0.14871865510000001" green="0.57390666010000002" blue="0.98827964069999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uOW-Pi-02h" kind="popoverPresentation" identifier="twoPopUp" popoverAnchorView="VmS-bZ-e2N" id="wbL-e4-dcy">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ln-ik-nPS">
+                                <rect key="frame" x="24" y="208" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="THREE">
+                                    <color key="titleColor" red="0.1456451714" green="0.57390636210000001" blue="0.98827964069999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Eo5-ba-Reg" kind="popoverPresentation" identifier="threePopUp" popoverAnchorView="5ln-ik-nPS" id="tPo-gA-8E8">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STj-Mo-y6E">
+                                <rect key="frame" x="20" y="316" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="FOUR">
+                                    <color key="titleColor" red="0.14590689539999999" green="0.58192634580000002" blue="0.99220103029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wjs-FY-Tyh" kind="popoverPresentation" identifier="fourPopUp" popoverAnchorView="STj-Mo-y6E" id="hiQ-EW-DSA">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQM-26-XKQ">
+                                <rect key="frame" x="20" y="424" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="FIVE">
+                                    <color key="titleColor" red="0.075165323909999998" green="0.58165168759999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wR4-2B-8AD" kind="popoverPresentation" identifier="fivePopUp" popoverAnchorView="QQM-26-XKQ" id="3fd-Qk-GzD">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8E9-rV-9Ij">
+                                <rect key="frame" x="20" y="532" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="SIX">
+                                    <color key="titleColor" red="0.073715381319999995" green="0.57797837259999996" blue="0.98827952149999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G5r-df-Ltc" kind="popoverPresentation" identifier="sixPopUp" popoverAnchorView="8E9-rV-9Ij" id="p31-Eu-Qsh">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnq-c1-JVb">
+                                <rect key="frame" x="294" y="-8" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="SEVEN">
+                                    <color key="titleColor" red="0.14846527579999999" green="0.57404178380000004" blue="0.98435777430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iwZ-ZD-K5d" kind="popoverPresentation" identifier="sevenPopUp" popoverAnchorView="Mnq-c1-JVb" id="6OX-e9-IKl">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXo-dD-4u5">
+                                <rect key="frame" x="294" y="100" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="EIGHT">
+                                    <color key="titleColor" red="0.14564615489999999" green="0.57798403499999995" blue="0.9882794023" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fqd-tx-S9c" kind="popoverPresentation" identifier="eightPopUp" popoverAnchorView="VXo-dD-4u5" id="dBY-JF-kLl">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNb-D2-HwH">
+                                <rect key="frame" x="294" y="208" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="NINE">
+                                    <color key="titleColor" red="0.1461675167" green="0.58179217579999998" blue="0.99612289669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Abh-oa-TbL" kind="popoverPresentation" identifier="ninePopUp" popoverAnchorView="uNb-D2-HwH" id="1Fz-qJ-pCJ">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC0-Vd-u4X">
+                                <rect key="frame" x="294" y="316" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="TEN">
+                                    <color key="titleColor" red="0.074682630599999994" green="0.58178657290000002" blue="0.99612301589999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iG9-AP-H7n" kind="popoverPresentation" identifier="tenPopUp" popoverAnchorView="oC0-Vd-u4X" id="k0l-yX-txc">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aim-hc-7Ha">
+                                <rect key="frame" x="294" y="424" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="JACK">
+                                    <color key="titleColor" red="0.1482127905" green="0.57417607309999996" blue="0.98043590780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bPe-q5-wJU" kind="popoverPresentation" identifier="jackPopUp" popoverAnchorView="aim-hc-7Ha" id="zMR-wP-R6w">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Das-YD-rTH">
+                                <rect key="frame" x="157" y="606" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="KING">
+                                    <color key="titleColor" red="0.1459058821" green="0.57784944770000002" blue="0.99220126870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="T5z-fz-Xwr" kind="popoverPresentation" identifier="kingPopUp" popoverAnchorView="Das-YD-rTH" id="qdQ-p7-Uiw">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPJ-qA-gJH">
+                                <rect key="frame" x="287" y="532" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="QUEEN">
+                                    <color key="titleColor" red="0.14796024560000001" green="0.57023364310000002" blue="0.97651427980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="K4l-OS-QNM" kind="popoverPresentation" identifier="queenPopUp" popoverAnchorView="NPJ-qA-gJH" id="pYW-jd-Kvp">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ZLt-fo-eyc"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69675727739726023" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="C7D-dC-fNW"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="400" height="400"/>
-                    <size key="freeformSize" width="400" height="400"/>
+                    <navigationItem key="navigationItem" id="fhk-qu-VAe"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="842"/>
                     <connections>
-                        <outlet property="ruleText" destination="1f3-h8-haY" id="9Ae-mz-vJs"/>
-                        <outlet property="topView" destination="fv4-HU-L2O" id="h39-Qk-7gu"/>
+                        <outlet property="aceGuide" destination="BVE-0o-RRO" id="jMV-DF-C3e"/>
+                        <outlet property="eightGuide" destination="VXo-dD-4u5" id="L3p-30-NZP"/>
+                        <outlet property="fiveGuide" destination="QQM-26-XKQ" id="QFT-dX-fiK"/>
+                        <outlet property="fourGuide" destination="STj-Mo-y6E" id="gak-Fm-U8f"/>
+                        <outlet property="jackGuide" destination="aim-hc-7Ha" id="yeh-87-n1H"/>
+                        <outlet property="kingGuide" destination="Das-YD-rTH" id="qdU-25-VNI"/>
+                        <outlet property="nineGuide" destination="uNb-D2-HwH" id="1sz-gc-7lN"/>
+                        <outlet property="queenGuide" destination="NPJ-qA-gJH" id="x2s-33-Cbt"/>
+                        <outlet property="ruleGuideView" destination="I1C-Dw-JT1" id="A8p-Tv-W54"/>
+                        <outlet property="sevenGuide" destination="Mnq-c1-JVb" id="m6E-BW-iwg"/>
+                        <outlet property="sixGuide" destination="8E9-rV-9Ij" id="hPw-bW-ToR"/>
+                        <outlet property="tenGuide" destination="oC0-Vd-u4X" id="VhR-Yo-8fg"/>
+                        <outlet property="threeGuide" destination="5ln-ik-nPS" id="X7g-fm-I4x"/>
+                        <outlet property="twoGuide" destination="VmS-bZ-e2N" id="eAW-9V-ufr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZW-Aq-Ml3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="76"/>
+            <point key="canvasLocation" x="-1230" y="-32"/>
+        </scene>
+        <!--AceGuidePopUpVC-->
+        <scene sceneID="kNJ-22-NN0">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="JcX-Ve-emy" userLabel="AceGuidePopUpVC" customClass="AceGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JhL-0I-dk9" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJH-HN-vA2" userLabel="topView">
+                                <rect key="frame" x="2" y="2" width="298" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Everyone Drinks&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnS-3B-hex">
+                                        <rect key="frame" x="8" y="7" width="282" height="183"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30139661815068491" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30321596746575341" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LJH-HN-vA2" firstAttribute="top" secondItem="JhL-0I-dk9" secondAttribute="top" constant="2" id="n6x-SF-C9c"/>
+                            <constraint firstItem="LJH-HN-vA2" firstAttribute="top" secondItem="JhL-0I-dk9" secondAttribute="top" constant="2" id="qQH-Lb-CO3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EAf-EG-ooU"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="aceGuideBackgroundView" destination="JhL-0I-dk9" id="fLi-OT-Me2"/>
+                        <outlet property="aceGuideTopView" destination="LJH-HN-vA2" id="r7x-vJ-YiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUA-gU-7R7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="-862"/>
+        </scene>
+        <!--TwoGuidePopUpVC-->
+        <scene sceneID="4LU-0T-NV4">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="uOW-Pi-02h" userLabel="TwoGuidePopUpVC" customClass="TwoGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ok7-r4-7gh" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3I-Ck-QOw" userLabel="topView">
+                                <rect key="frame" x="5" y="0.0" width="295" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;You Drink&quot;. The Player who picked the card picks a person to drink." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGD-Li-riy">
+                                        <rect key="frame" x="18" y="8" width="269" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.29548373287671231" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30048694349315069" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h3I-Ck-QOw" firstAttribute="top" secondItem="Ok7-r4-7gh" secondAttribute="top" constant="2" id="5yA-Uf-PHR"/>
+                            <constraint firstItem="h3I-Ck-QOw" firstAttribute="top" secondItem="Ok7-r4-7gh" secondAttribute="top" constant="2" id="hoi-Rp-3r7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZbI-uc-DMB"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="twoBackgroundView" destination="Ok7-r4-7gh" id="ZaC-yD-pYH"/>
+                        <outlet property="twoTopView" destination="h3I-Ck-QOw" id="6M5-Op-bW0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESs-MM-6QC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="-698"/>
+        </scene>
+        <!--TheeGuidePopUpVC-->
+        <scene sceneID="rqn-9K-zow">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="Eo5-ba-Reg" userLabel="TheeGuidePopUpVC" customClass="ThreeGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kJE-UT-9L9" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EBn-MC-ijp" userLabel="topView">
+                                <rect key="frame" x="2" y="2" width="298" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Me Drink&quot;. The player who picked the card drinks." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syQ-Jr-ijx">
+                                        <rect key="frame" x="8" y="8" width="282" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260273971" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EBn-MC-ijp" firstAttribute="top" secondItem="kJE-UT-9L9" secondAttribute="top" constant="2" id="LfS-ne-P3z"/>
+                            <constraint firstItem="EBn-MC-ijp" firstAttribute="top" secondItem="kJE-UT-9L9" secondAttribute="top" constant="2" id="MCE-YW-tnf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ocl-tr-KUx"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="threeBackgroundView" destination="kJE-UT-9L9" id="q2c-0b-gRZ"/>
+                        <outlet property="threeTopView" destination="EBn-MC-ijp" id="a9k-DW-bQv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5OO-Hh-a0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="-533"/>
+        </scene>
+        <!--FourGuidePopUpVC-->
+        <scene sceneID="tJz-ru-T0J">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="Wjs-FY-Tyh" userLabel="FourGuidePopUpVC" customClass="FourGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5dF-7d-qLB" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHj-Bs-J6q" userLabel="topView">
+                                <rect key="frame" x="0.0" y="2" width="300" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Women Drink&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2C5-9H-OI7">
+                                        <rect key="frame" x="8" y="0.0" width="284" height="198"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gHj-Bs-J6q" firstAttribute="top" secondItem="5dF-7d-qLB" secondAttribute="top" constant="2" id="tP3-gz-1ZA"/>
+                            <constraint firstItem="gHj-Bs-J6q" firstAttribute="top" secondItem="5dF-7d-qLB" secondAttribute="top" constant="2" id="tob-o6-GI3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vzL-BK-taU"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="fourBackgroundView" destination="5dF-7d-qLB" id="QKP-u1-PMz"/>
+                        <outlet property="fourTopView" destination="gHj-Bs-J6q" id="uof-uU-ra5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACA-Bb-jH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="-370"/>
+        </scene>
+        <!--FiveGuidePopUpVC-->
+        <scene sceneID="aYa-Fl-Adh">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="wR4-2B-8AD" userLabel="FiveGuidePopUpVC" customClass="FiveGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bk4-g4-PPU" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-Cz-DBi" userLabel="topView">
+                                <rect key="frame" x="0.0" y="2" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYk-7R-lRR">
+                                        <rect key="frame" x="17" y="0.0" width="275" height="269"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">"Drive". Everyone puts up their hands as if driving a car. The player who drew the card begins. They say "vroom" while tilting their hands to the right or left. The "driver" is passed to the player next to them in that direction.Everyone puts up their hands as if driving a car. The player who drew the card begins. They say "vroom" while tilting their hands to the right or left. The "driver" is passed to the player next to them in that direction.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hae-Cz-DBi" firstAttribute="top" secondItem="bk4-g4-PPU" secondAttribute="top" constant="2" id="Rvr-Y4-HOm"/>
+                            <constraint firstItem="Hae-Cz-DBi" firstAttribute="top" secondItem="bk4-g4-PPU" secondAttribute="top" constant="2" id="qwT-yS-wqf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eGG-AI-973"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <size key="freeformSize" width="300" height="280"/>
+                    <connections>
+                        <outlet property="fiveBackgroundView" destination="bk4-g4-PPU" id="UrG-a7-Hbs"/>
+                        <outlet property="fiveTopView" destination="Hae-Cz-DBi" id="WEo-so-jw9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPt-6L-E5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="-182"/>
+        </scene>
+        <!--SixGuidePopUpVC-->
+        <scene sceneID="8YE-xA-BPQ">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="G5r-df-Ltc" userLabel="SixGuidePopUpVC" customClass="SixGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iq9-G0-ItA" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jh9-hb-vFR" userLabel="topView">
+                                <rect key="frame" x="0.0" y="2" width="300" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Men Drink&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou6-PW-OwY">
+                                        <rect key="frame" x="8" y="8" width="284" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jh9-hb-vFR" firstAttribute="top" secondItem="Iq9-G0-ItA" secondAttribute="top" constant="2" id="LeH-vQ-bg6"/>
+                            <constraint firstItem="jh9-hb-vFR" firstAttribute="top" secondItem="Iq9-G0-ItA" secondAttribute="top" constant="2" id="mah-nS-80j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KSA-w2-6AW"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="sixBackgroundView" destination="Iq9-G0-ItA" id="oSA-Rr-shj"/>
+                        <outlet property="sixTopView" destination="jh9-hb-vFR" id="Zgy-gG-Blw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYv-YK-l84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="8"/>
+        </scene>
+        <!--SevenGuidePopUpVC-->
+        <scene sceneID="4T7-xF-ZRD">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="iwZ-ZD-K5d" userLabel="SevenGuidePopUpVC" customClass="SevenGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OY5-7Z-gLQ" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-0B-sA4" userLabel="topView">
+                                <rect key="frame" x="0.0" y="2" width="300" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Heaven&quot;. Last person to get both hands in the air has to drink." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5y-rU-y5r">
+                                        <rect key="frame" x="8" y="8" width="284" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zDl-0B-sA4" firstAttribute="top" secondItem="OY5-7Z-gLQ" secondAttribute="top" constant="2" id="Mel-4a-v3X"/>
+                            <constraint firstItem="zDl-0B-sA4" firstAttribute="top" secondItem="OY5-7Z-gLQ" secondAttribute="top" constant="2" id="e2r-Dx-FgM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tyf-WG-b4g"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="sevenBackgroundView" destination="OY5-7Z-gLQ" id="h9c-GP-iZ5"/>
+                        <outlet property="sevenTopView" destination="zDl-0B-sA4" id="Sij-V0-nhI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZQ-eH-4Gg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="173"/>
+        </scene>
+        <!--EightGuidePopUpVC-->
+        <scene sceneID="lZG-oA-Us9">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="fqd-tx-S9c" userLabel="EightGuidePopUpVC" customClass="EightGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nj7-Iy-CfB" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlr-4f-jmN" userLabel="topView">
+                                <rect key="frame" x="0.0" y="2" width="300" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Pick a Mate&quot;. Choose a person to be your mate and they drink when you drink. (Can stack)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-eO-PNv">
+                                        <rect key="frame" x="8" y="8" width="284" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zlr-4f-jmN" firstAttribute="top" secondItem="nj7-Iy-CfB" secondAttribute="top" constant="2" id="LJ4-Wn-rk6"/>
+                            <constraint firstItem="Zlr-4f-jmN" firstAttribute="top" secondItem="nj7-Iy-CfB" secondAttribute="top" constant="2" id="cbO-Fv-Dal"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eIN-ls-uiC"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="eightBackgroundView" destination="nj7-Iy-CfB" id="8mc-Fi-uIw"/>
+                        <outlet property="eightTopView" destination="Zlr-4f-jmN" id="CbI-0X-ks4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74S-II-d8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="336"/>
+        </scene>
+        <!--NineGuidePopUpVC-->
+        <scene sceneID="5te-5g-8Sr">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="Abh-oa-TbL" userLabel="NineGuidePopUpVC" customClass="NineGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i4k-tm-hob" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ImN-XT-yCr" userLabel="topView">
+                                <rect key="frame" x="0.0" y="2" width="300" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLw-HD-Tqr">
+                                        <rect key="frame" x="8" y="8" width="284" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">"Make a Rhyme". You say a word, and the person to your right has to say a word that rhymes. This continues around the table until someone cannot think of a word. This person must drink. The same word may not be used twice.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ImN-XT-yCr" firstAttribute="top" secondItem="i4k-tm-hob" secondAttribute="top" constant="2" id="W48-O3-cnU"/>
+                            <constraint firstItem="ImN-XT-yCr" firstAttribute="top" secondItem="i4k-tm-hob" secondAttribute="top" constant="2" id="fqX-E4-RhA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BTb-C3-wvH"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="nineBackgroundView" destination="i4k-tm-hob" id="Uib-vE-gsw"/>
+                        <outlet property="nineTopView" destination="ImN-XT-yCr" id="niW-KU-zJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnx-3l-tbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="502"/>
+        </scene>
+        <!--TenGuidePopUpVC-->
+        <scene sceneID="WPv-JI-fiO">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="iG9-AP-H7n" userLabel="TenGuidePopUpVC" customClass="TenGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Wn-do-cxx" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFL-O2-HUi" userLabel="topView">
+                                <rect key="frame" x="2" y="2" width="298" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcc-hg-3Ah">
+                                        <rect key="frame" x="8" y="9" width="282" height="181"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">"Make a Rule". The player who picked the card makes up a real that has to be followed through out the whole game. If a person breaks a rule, they drink. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oFL-O2-HUi" firstAttribute="top" secondItem="8Wn-do-cxx" secondAttribute="top" constant="2" id="OTo-ob-zAR"/>
+                            <constraint firstItem="oFL-O2-HUi" firstAttribute="top" secondItem="8Wn-do-cxx" secondAttribute="top" constant="2" id="t9f-xK-ZBk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vdw-az-Rqs"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="tenBackgroundView" destination="8Wn-do-cxx" id="ycL-XY-rQP"/>
+                        <outlet property="tenTopView" destination="oFL-O2-HUi" id="SZz-4d-uuH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1l-JF-WNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="667"/>
+        </scene>
+        <!--JackGuidePopUpVC-->
+        <scene sceneID="bmZ-aq-zWy">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="bPe-q5-wJU" userLabel="JackGuidePopUpVC" customClass="JackGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Sz-DW-fAY" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyw-4x-5VR" userLabel="topView">
+                                <rect key="frame" x="2" y="2" width="298" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-cs-RAh">
+                                        <rect key="frame" x="8" y="9" width="282" height="181"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">"Waterfall". Each player starts drinking their beverage at the same time as the person to their left. No player can stop drinking until the player before them stops. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oyw-4x-5VR" firstAttribute="top" secondItem="6Sz-DW-fAY" secondAttribute="top" constant="2" id="rll-VL-qb4"/>
+                            <constraint firstItem="Oyw-4x-5VR" firstAttribute="top" secondItem="6Sz-DW-fAY" secondAttribute="top" constant="2" id="uiH-nM-ItV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A4H-vu-cA5"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="jackBackgroundView" destination="6Sz-DW-fAY" id="msx-5Y-uZK"/>
+                        <outlet property="jackTopView" destination="Oyw-4x-5VR" id="fjG-9R-ur4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7BB-1s-MT9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="834"/>
+        </scene>
+        <!--QueenGuidePopUpVC-->
+        <scene sceneID="Lz5-FG-b9X">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="K4l-OS-QNM" userLabel="QueenGuidePopUpVC" customClass="QueenGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avC-jz-aED" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH4-7f-aK6" userLabel="topView">
+                                <rect key="frame" x="0.0" y="2" width="300" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-fk-i0Q">
+                                        <rect key="frame" x="8" y="8" width="284" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">"Categories". You come up with a category of things, and the person to your right must come up with something that falls within that category. This goes on around the table until someone can't come up with anything. This person must drink.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lH4-7f-aK6" firstAttribute="top" secondItem="avC-jz-aED" secondAttribute="top" constant="2" id="AJz-Xy-0ru"/>
+                            <constraint firstItem="lH4-7f-aK6" firstAttribute="top" secondItem="avC-jz-aED" secondAttribute="top" constant="2" id="UH3-br-YU5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VdL-gd-Jof"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="queenBackgroundView" destination="avC-jz-aED" id="FmT-rZ-zWU"/>
+                        <outlet property="queenTopView" destination="lH4-7f-aK6" id="JSx-g8-evp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLg-7b-gy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="996"/>
+        </scene>
+        <!--KingGuidePopUpVC-->
+        <scene sceneID="R4E-Xm-sQQ">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="T5z-fz-Xwr" userLabel="KingGuidePopUpVC" customClass="KingGuidePopUpVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YeB-uK-Jld" userLabel="backgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fm-be-MVJ" userLabel="topView">
+                                <rect key="frame" x="2" y="2" width="298" height="198"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0I-aS-JKD">
+                                        <rect key="frame" x="8" y="7" width="282" height="183"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">"King's Cup". When each of the first 3 Kings are drawn, the person who drew the card puts some of their drink into the King's Cup at the center of the table. When the 4th King is drawn, the person who drew the 4th King must drink the contents of the King's Cup.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1fm-be-MVJ" firstAttribute="top" secondItem="YeB-uK-Jld" secondAttribute="top" constant="2" id="T22-mG-yW5"/>
+                            <constraint firstItem="1fm-be-MVJ" firstAttribute="top" secondItem="YeB-uK-Jld" secondAttribute="top" constant="2" id="hIZ-sg-CGl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WgX-5j-Fa7"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="kingBackgroundView" destination="YeB-uK-Jld" id="jWv-aV-gEK"/>
+                        <outlet property="kingTopView" destination="1fm-be-MVJ" id="aMN-6E-7OZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l04-xh-tM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="1156"/>
         </scene>
     </scenes>
     <resources>
+        <image name="beersignII" width="248" height="256"/>
         <image name="cardBack" width="130" height="202"/>
+        <image name="emptyBeer" width="62" height="71"/>
+        <image name="infoIconWhitenBlack" width="56" height="56"/>
     </resources>
     <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
 </document>

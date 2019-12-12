@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E980DC023A1CCB600715C06 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E980DBF23A1CCB600715C06 /* StartScreenViewController.swift */; };
+		7E980DC223A1CCCE00715C06 /* PlayerScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E980DC123A1CCCE00715C06 /* PlayerScreenViewController.swift */; };
 		7E98C748239E0DBF00E296F5 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E98C747239E0DBF00E296F5 /* Rules.swift */; };
 		7EA9E88023978895005B2103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA9E87F23978895005B2103 /* AppDelegate.swift */; };
 		7EA9E88223978895005B2103 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA9E88123978895005B2103 /* SceneDelegate.swift */; };
@@ -14,9 +16,24 @@
 		7EA9E88723978895005B2103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA9E88523978895005B2103 /* Main.storyboard */; };
 		7EA9E88923978896005B2103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA9E88823978896005B2103 /* Assets.xcassets */; };
 		7EA9E88C23978896005B2103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA9E88A23978896005B2103 /* LaunchScreen.storyboard */; };
+		7EFE191323A21C130069C994 /* AceGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE191223A21C130069C994 /* AceGuidePopUpVC.swift */; };
+		7EFE191523A21F8D0069C994 /* TwoGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE191423A21F8D0069C994 /* TwoGuidePopUpVC.swift */; };
+		7EFE191723A2245E0069C994 /* ThreeGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE191623A2245E0069C994 /* ThreeGuidePopUpVC.swift */; };
+		7EFE191923A224700069C994 /* FourGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE191823A224700069C994 /* FourGuidePopUpVC.swift */; };
+		7EFE191B23A224870069C994 /* FiveGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE191A23A224870069C994 /* FiveGuidePopUpVC.swift */; };
+		7EFE191D23A2249F0069C994 /* SixGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE191C23A2249F0069C994 /* SixGuidePopUpVC.swift */; };
+		7EFE192123A224DC0069C994 /* EightGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE192023A224DC0069C994 /* EightGuidePopUpVC.swift */; };
+		7EFE192323A224F50069C994 /* SevenGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE192223A224F50069C994 /* SevenGuidePopUpVC.swift */; };
+		7EFE192523A2250D0069C994 /* NineGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE192423A2250D0069C994 /* NineGuidePopUpVC.swift */; };
+		7EFE192723A225230069C994 /* TenGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE192623A225230069C994 /* TenGuidePopUpVC.swift */; };
+		7EFE192923A2253B0069C994 /* JackGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE192823A2253B0069C994 /* JackGuidePopUpVC.swift */; };
+		7EFE192B23A2254C0069C994 /* QueenGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE192A23A2254C0069C994 /* QueenGuidePopUpVC.swift */; };
+		7EFE192D23A2255C0069C994 /* KingGuidePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE192C23A2255C0069C994 /* KingGuidePopUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E980DBF23A1CCB600715C06 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		7E980DC123A1CCCE00715C06 /* PlayerScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreenViewController.swift; sourceTree = "<group>"; };
 		7E98C747239E0DBF00E296F5 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		7EA9E87C23978895005B2103 /* Party_Foul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Party_Foul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA9E87F23978895005B2103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +43,19 @@
 		7EA9E88823978896005B2103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EA9E88B23978896005B2103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA9E88D23978896005B2103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EFE191223A21C130069C994 /* AceGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AceGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE191423A21F8D0069C994 /* TwoGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE191623A2245E0069C994 /* ThreeGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE191823A224700069C994 /* FourGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE191A23A224870069C994 /* FiveGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE191C23A2249F0069C994 /* SixGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE192023A224DC0069C994 /* EightGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EightGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE192223A224F50069C994 /* SevenGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE192423A2250D0069C994 /* NineGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NineGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE192623A225230069C994 /* TenGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE192823A2253B0069C994 /* JackGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JackGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE192A23A2254C0069C994 /* QueenGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueenGuidePopUpVC.swift; sourceTree = "<group>"; };
+		7EFE192C23A2255C0069C994 /* KingGuidePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingGuidePopUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +93,24 @@
 				7EA9E88323978895005B2103 /* ViewController.swift */,
 				7E98C747239E0DBF00E296F5 /* Rules.swift */,
 				7EA9E88523978895005B2103 /* Main.storyboard */,
+				7E980DBF23A1CCB600715C06 /* StartScreenViewController.swift */,
+				7E980DC123A1CCCE00715C06 /* PlayerScreenViewController.swift */,
 				7EA9E88823978896005B2103 /* Assets.xcassets */,
 				7EA9E88A23978896005B2103 /* LaunchScreen.storyboard */,
 				7EA9E88D23978896005B2103 /* Info.plist */,
+				7EFE191223A21C130069C994 /* AceGuidePopUpVC.swift */,
+				7EFE191423A21F8D0069C994 /* TwoGuidePopUpVC.swift */,
+				7EFE191623A2245E0069C994 /* ThreeGuidePopUpVC.swift */,
+				7EFE191823A224700069C994 /* FourGuidePopUpVC.swift */,
+				7EFE191A23A224870069C994 /* FiveGuidePopUpVC.swift */,
+				7EFE191C23A2249F0069C994 /* SixGuidePopUpVC.swift */,
+				7EFE192223A224F50069C994 /* SevenGuidePopUpVC.swift */,
+				7EFE192023A224DC0069C994 /* EightGuidePopUpVC.swift */,
+				7EFE192423A2250D0069C994 /* NineGuidePopUpVC.swift */,
+				7EFE192623A225230069C994 /* TenGuidePopUpVC.swift */,
+				7EFE192823A2253B0069C994 /* JackGuidePopUpVC.swift */,
+				7EFE192A23A2254C0069C994 /* QueenGuidePopUpVC.swift */,
+				7EFE192C23A2255C0069C994 /* KingGuidePopUpVC.swift */,
 			);
 			path = Party_Foul;
 			sourceTree = "<group>";
@@ -141,10 +186,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EFE192523A2250D0069C994 /* NineGuidePopUpVC.swift in Sources */,
+				7EFE192B23A2254C0069C994 /* QueenGuidePopUpVC.swift in Sources */,
 				7EA9E88423978895005B2103 /* ViewController.swift in Sources */,
+				7EFE192723A225230069C994 /* TenGuidePopUpVC.swift in Sources */,
+				7EFE191323A21C130069C994 /* AceGuidePopUpVC.swift in Sources */,
+				7EFE191B23A224870069C994 /* FiveGuidePopUpVC.swift in Sources */,
 				7E98C748239E0DBF00E296F5 /* Rules.swift in Sources */,
+				7EFE192D23A2255C0069C994 /* KingGuidePopUpVC.swift in Sources */,
+				7EFE192923A2253B0069C994 /* JackGuidePopUpVC.swift in Sources */,
+				7EFE191723A2245E0069C994 /* ThreeGuidePopUpVC.swift in Sources */,
+				7E980DC223A1CCCE00715C06 /* PlayerScreenViewController.swift in Sources */,
 				7EA9E88023978895005B2103 /* AppDelegate.swift in Sources */,
+				7EFE191D23A2249F0069C994 /* SixGuidePopUpVC.swift in Sources */,
+				7EFE191923A224700069C994 /* FourGuidePopUpVC.swift in Sources */,
+				7EFE191523A21F8D0069C994 /* TwoGuidePopUpVC.swift in Sources */,
+				7EFE192323A224F50069C994 /* SevenGuidePopUpVC.swift in Sources */,
 				7EA9E88223978895005B2103 /* SceneDelegate.swift in Sources */,
+				7EFE192123A224DC0069C994 /* EightGuidePopUpVC.swift in Sources */,
+				7E980DC023A1CCB600715C06 /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
