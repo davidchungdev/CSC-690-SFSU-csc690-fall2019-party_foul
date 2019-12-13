@@ -15,25 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kK-9h-mzM">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-b5-6w7">
                                 <rect key="frame" x="20" y="638" width="374" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="RULES">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-gG-ZZD">
-                                <rect key="frame" x="20" y="746" width="374" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="EXIT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="exitTapped:" destination="mGX-oF-jPz" eventType="touchUpInside" id="yTl-Lh-aEt"/>
+                                    <segue destination="f11-ks-kxJ" kind="popoverPresentation" popoverAnchorView="1RV-b5-6w7" id="7Yv-8U-uhY">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hy-Qs-aY9">
@@ -60,13 +53,24 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-gG-ZZD">
+                                <rect key="frame" x="20" y="746" width="374" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30324272260000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="EXIT">
+                                    <color key="titleColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitTapped:" destination="mGX-oF-jPz" eventType="touchUpInside" id="yTl-Lh-aEt"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.57358423223350252" green="0.57358423223350252" blue="0.57358423223350252" alpha="0.30016588184657533" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="LZM-FU-JcX"/>
                     </view>
                     <connections>
-                        <outlet property="exitButton" destination="QZ8-gG-ZZD" id="nLf-Ku-apN"/>
-                        <outlet property="rulesButton" destination="3kK-9h-mzM" id="beq-h8-ogP"/>
+                        <outlet property="exitButton" destination="QZ8-gG-ZZD" id="DiE-Ll-cEm"/>
                         <outlet property="startButton" destination="9hy-Qs-aY9" id="tCk-uM-jID"/>
                     </connections>
                 </viewController>
@@ -74,40 +78,30 @@
             </objects>
             <point key="canvasLocation" x="-3191.304347826087" y="-32.142857142857139"/>
         </scene>
-        <!--Player Screen View Controller-->
-        <scene sceneID="8gH-ir-9K6">
+        <!--Start Rules ScreenVC-->
+        <scene sceneID="vhK-Jf-m1C">
             <objects>
-                <viewController id="qMm-v8-YOK" customClass="PlayerScreenViewController" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eSL-V4-yF3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="f11-ks-kxJ" customClass="StartRulesScreenVC" customModule="Party_Foul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yJS-7y-sZd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Number of Players" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4n-kq-sbs">
-                                <rect key="frame" x="32" y="165" width="362" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K59-bA-pD4">
+                                <rect key="frame" x="20" y="0.0" width="374" height="410"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuQ-Zr-dbe">
-                                <rect key="frame" x="32" y="306" width="362" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enter"/>
-                                <connections>
-                                    <action selector="enter:" destination="qMm-v8-YOK" eventType="touchUpInside" id="kHE-nP-7sn"/>
-                                </connections>
-                            </button>
+                                <string key="text">HOW TO PLAY KING's CUP: Every card has a rule associated with it. A large cup is required to pour drinks into. You also need some friends and A LOT of drinks. </string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="27"/>
+                                <color key="textColor" red="0.1459058821" green="0.57784944770000002" blue="0.99220126870000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5cJ-H8-l1k"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CFD-DG-cCX"/>
                     </view>
-                    <connections>
-                        <outlet property="enterButton" destination="fuQ-Zr-dbe" id="UhA-Od-eFP"/>
-                        <outlet property="textField" destination="H4n-kq-sbs" id="TR3-i5-klp"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vds-co-q7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="os5-DH-3EM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4629" y="-212"/>
+            <point key="canvasLocation" x="-2723.1884057971015" y="658.92857142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -129,7 +123,7 @@
                                                 <rect key="frame" x="4" y="15" width="248" height="56"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="38"/>
-                                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99713379140000002" green="0.82183134560000004" blue="0.089553080500000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -156,7 +150,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -178,7 +172,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-Ge-pmJ">
                                 <rect key="frame" x="157" y="776" width="100" height="100"/>
@@ -207,7 +200,7 @@
                                 </subviews>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.57358423219999999" green="0.57358423219999999" blue="0.57358423219999999" alpha="0.30016588179999998" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -257,6 +250,7 @@
                                     <color key="titleColor" red="0.14871865510000001" green="0.57390666010000002" blue="0.98827964069999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="twoButton:" destination="Qzi-wU-gCc" eventType="touchUpInside" id="u4W-u8-lb2"/>
                                     <segue destination="uOW-Pi-02h" kind="popoverPresentation" identifier="twoPopUp" popoverAnchorView="VmS-bZ-e2N" id="wbL-e4-dcy">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -322,7 +316,7 @@
                                     <color key="titleColor" red="0.14846527579999999" green="0.57404178380000004" blue="0.98435777430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="iwZ-ZD-K5d" kind="popoverPresentation" identifier="sevenPopUp" popoverAnchorView="Mnq-c1-JVb" id="6OX-e9-IKl">
+                                    <segue destination="iwZ-ZD-K5d" kind="popoverPresentation" identifier="sevenPopUp" popoverAnchorView="Mnq-c1-JVb" id="hMR-uE-J06">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -406,7 +400,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69675727739726023" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.76602632705479456" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="C7D-dC-fNW"/>
                     </view>
                     <navigationItem key="navigationItem" id="fhk-qu-VAe"/>
@@ -429,6 +423,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZW-Aq-Ml3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Qzi-wU-gCc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1230" y="-32"/>
         </scene>
@@ -447,7 +442,7 @@
                                         <rect key="frame" x="8" y="7" width="282" height="183"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -487,7 +482,7 @@
                                         <rect key="frame" x="18" y="8" width="269" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -527,7 +522,7 @@
                                         <rect key="frame" x="8" y="8" width="282" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -567,7 +562,7 @@
                                         <rect key="frame" x="8" y="0.0" width="284" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -608,7 +603,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">"Drive". Everyone puts up their hands as if driving a car. The player who drew the card begins. They say "vroom" while tilting their hands to the right or left. The "driver" is passed to the player next to them in that direction.Everyone puts up their hands as if driving a car. The player who drew the card begins. They say "vroom" while tilting their hands to the right or left. The "driver" is passed to the player next to them in that direction.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -648,7 +643,7 @@
                                         <rect key="frame" x="8" y="8" width="284" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -662,6 +657,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KSA-w2-6AW"/>
                     </view>
+                    <navigationItem key="navigationItem" id="F7M-3p-AWg"/>
                     <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
                     <size key="freeformSize" width="300" height="200"/>
                     <connections>
@@ -688,7 +684,7 @@
                                         <rect key="frame" x="8" y="8" width="284" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -728,7 +724,7 @@
                                         <rect key="frame" x="8" y="8" width="284" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -769,7 +765,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">"Make a Rhyme". You say a word, and the person to your right has to say a word that rhymes. This continues around the table until someone cannot think of a word. This person must drink. The same word may not be used twice.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -810,7 +806,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">"Make a Rule". The player who picked the card makes up a real that has to be followed through out the whole game. If a person breaks a rule, they drink. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -851,7 +847,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">"Waterfall". Each player starts drinking their beverage at the same time as the person to their left. No player can stop drinking until the player before them stops. </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -892,7 +888,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">"Categories". You come up with a category of things, and the person to your right must come up with something that falls within that category. This goes on around the table until someone can't come up with anything. This person must drink.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -933,7 +929,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">"King's Cup". When each of the first 3 Kings are drawn, the person who drew the card puts some of their drink into the King's Cup at the center of the table. When the 4th King is drawn, the person who drew the 4th King must drink the contents of the King's Cup.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99890607600000003" green="1" blue="0.80781388279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

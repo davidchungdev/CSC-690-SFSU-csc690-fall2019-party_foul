@@ -24,7 +24,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
     
     var rule : String!
     var cardCounter: Int = 0
-    var playerCounter: Int = 9
+    var playerCounter: Int = 6
     var aceCounter: Int = 0
     var twoCounter: Int = 0
     var threeCounter: Int = 0
@@ -38,7 +38,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
     var jackCounter: Int = 0
     var queenCounter: Int = 0
     var kingCounter: Int = 0
-    var querstionMaster: String = ""
     var counter: Int = 0
     
 
@@ -118,7 +117,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
             self.ruleTextField.text = "Categories!"
             queenCounter += 1
         case 48,49,50,51:
-            self.ruleTextField.text = "King's Cup!"
+            self.ruleTextField.text = "Pour in The King's Cup!"
             kingCounter += 1
         default:
             self.ruleTextField.text = "Pick a Card"
@@ -135,8 +134,9 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
         }
         
     
-            //Addes to currently drawn cards to array of cards that have been drawn
-           cardDrawnArray.append(randomNumber)
+        //Adds to currently drawn cards to array of cards that have been drawn
+        cardDrawnArray.append(randomNumber)
+        
       /* counter += 1
        for element in cardDrawnArray{
               print(element)
@@ -154,9 +154,9 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate{
             self.beerImageView.image = UIImage(named: "almostBeer")
         } else if kingCounter == 4{
             self.playerLabel.text = "GAME OVER!!"
-            self.cardImageView.image = UIImage(named: "fullBeer")
+            self.cardImageView.image = UIImage(named: "endGame")
             self.beerImageView.image = UIImage(named: "fullBeer")
-            self.ruleTextField.text = ""
+            self.ruleTextField.text = "DRINK UP!!"
         }
     }
     

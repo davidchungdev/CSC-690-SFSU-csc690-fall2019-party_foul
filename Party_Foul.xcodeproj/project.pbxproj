@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E92CE1B23A31921002826CC /* StartRulesScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92CE1A23A31921002826CC /* StartRulesScreenVC.swift */; };
 		7E980DC023A1CCB600715C06 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E980DBF23A1CCB600715C06 /* StartScreenViewController.swift */; };
-		7E980DC223A1CCCE00715C06 /* PlayerScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E980DC123A1CCCE00715C06 /* PlayerScreenViewController.swift */; };
 		7E98C748239E0DBF00E296F5 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E98C747239E0DBF00E296F5 /* Rules.swift */; };
 		7EA9E88023978895005B2103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA9E87F23978895005B2103 /* AppDelegate.swift */; };
 		7EA9E88223978895005B2103 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA9E88123978895005B2103 /* SceneDelegate.swift */; };
@@ -32,8 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E92CE1A23A31921002826CC /* StartRulesScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRulesScreenVC.swift; sourceTree = "<group>"; };
 		7E980DBF23A1CCB600715C06 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
-		7E980DC123A1CCCE00715C06 /* PlayerScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScreenViewController.swift; sourceTree = "<group>"; };
 		7E98C747239E0DBF00E296F5 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		7EA9E87C23978895005B2103 /* Party_Foul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Party_Foul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA9E87F23978895005B2103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 				7E98C747239E0DBF00E296F5 /* Rules.swift */,
 				7EA9E88523978895005B2103 /* Main.storyboard */,
 				7E980DBF23A1CCB600715C06 /* StartScreenViewController.swift */,
-				7E980DC123A1CCCE00715C06 /* PlayerScreenViewController.swift */,
 				7EA9E88823978896005B2103 /* Assets.xcassets */,
+				7E92CE1A23A31921002826CC /* StartRulesScreenVC.swift */,
 				7EA9E88A23978896005B2103 /* LaunchScreen.storyboard */,
 				7EA9E88D23978896005B2103 /* Info.plist */,
 				7EFE191223A21C130069C994 /* AceGuidePopUpVC.swift */,
@@ -196,7 +196,6 @@
 				7EFE192D23A2255C0069C994 /* KingGuidePopUpVC.swift in Sources */,
 				7EFE192923A2253B0069C994 /* JackGuidePopUpVC.swift in Sources */,
 				7EFE191723A2245E0069C994 /* ThreeGuidePopUpVC.swift in Sources */,
-				7E980DC223A1CCCE00715C06 /* PlayerScreenViewController.swift in Sources */,
 				7EA9E88023978895005B2103 /* AppDelegate.swift in Sources */,
 				7EFE191D23A2249F0069C994 /* SixGuidePopUpVC.swift in Sources */,
 				7EFE191923A224700069C994 /* FourGuidePopUpVC.swift in Sources */,
@@ -204,6 +203,7 @@
 				7EFE192323A224F50069C994 /* SevenGuidePopUpVC.swift in Sources */,
 				7EA9E88223978895005B2103 /* SceneDelegate.swift in Sources */,
 				7EFE192123A224DC0069C994 /* EightGuidePopUpVC.swift in Sources */,
+				7E92CE1B23A31921002826CC /* StartRulesScreenVC.swift in Sources */,
 				7E980DC023A1CCB600715C06 /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

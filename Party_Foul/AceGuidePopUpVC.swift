@@ -11,6 +11,7 @@ import UIKit
 class AceGuidePopUpVC: UIViewController {
     @IBOutlet var aceGuideBackgroundView: UIView!
     @IBOutlet weak var aceGuideTopView: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
