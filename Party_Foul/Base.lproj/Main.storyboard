@@ -71,6 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="QZ8-gG-ZZD" id="DiE-Ll-cEm"/>
+                        <outlet property="ruleButton" destination="1RV-b5-6w7" id="PUZ-Wr-Bgn"/>
                         <outlet property="startButton" destination="9hy-Qs-aY9" id="tCk-uM-jID"/>
                     </connections>
                 </viewController>
@@ -101,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="os5-DH-3EM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2723.1884057971015" y="658.92857142857144"/>
+            <point key="canvasLocation" x="-3191" y="901"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

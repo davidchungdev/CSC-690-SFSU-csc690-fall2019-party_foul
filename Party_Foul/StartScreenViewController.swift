@@ -10,8 +10,8 @@ import UIKit
 
 class StartScreenViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var rulesButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var ruleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
