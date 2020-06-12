@@ -5,4 +5,4 @@ David Chung
 Lance Santos
 
 Proposal:
-This is a game application you can play with your friends when you're drunk.
+This is a game application you can play with your friends!
